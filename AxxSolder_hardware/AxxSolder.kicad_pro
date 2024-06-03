@@ -49,7 +49,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.25
+          "min_clearance": 0.0
         }
       },
       "diff_pair_dimensions": [
@@ -456,8 +456,24 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_footprint_libs": [
+      "custom_connectors",
+      "custom_hmi"
+    ],
+    "pinned_symbol_libs": [
+      "custom_connectors",
+      "custom_ics_amps",
+      "custom_ics_gatedrivers",
+      "custom_ics_interface",
+      "custom_ics_mcu",
+      "custom_ics_memory",
+      "custom_ics_misc",
+      "custom_ics_pmic",
+      "custom_inductors",
+      "custom_interface",
+      "custom_mosfets",
+      "custom_oscillators"
+    ]
   },
   "meta": {
     "filename": "AxxSolder.kicad_pro",
