@@ -17829,6 +17829,7 @@
 				(size 1.27 1.27)
 				(thickness 0.254)
 				(bold yes)
+				(color 0 0 255 1)
 			)
 			(justify left bottom)
 		)
@@ -18385,6 +18386,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(color 0 0 255 1)
 			)
 			(justify left bottom)
 		)
@@ -18597,6 +18599,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(color 0 255 0 1)
 			)
 			(justify left bottom)
 		)
@@ -18995,7 +18998,7 @@
 				(size 1.27 1.27)
 				(thickness 0.254)
 				(bold yes)
-				(color 0 132 0 1)
+				(color 0 255 0 1)
 			)
 			(justify left bottom)
 		)
@@ -19076,6 +19079,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(color 255 0 0 1)
 			)
 			(justify left bottom)
 		)
@@ -31042,7 +31046,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/lmr54406.pdf?ts=1659688249350&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FLMR54406%252Fpart-details%252FLMR54406DBVR"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/lmr54406.pdf"
 			(at 161.29 238.1 0)
 			(effects
 				(font
@@ -36702,7 +36706,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "daab1d61-d29e-4e4a-a645-2dcb0542267d")
 		(property "Reference" "U2"
 			(at 233.68 137.1599 90)
@@ -36714,7 +36717,7 @@
 			)
 		)
 		(property "Value" "PEC11L-4220F-S0015"
-			(at 233.68 139.6999 90)
+			(at 220.218 123.698 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -38188,6 +38191,79 @@
 			(project "AxxSolder"
 				(path "/d71363c3-4d90-469c-a600-831e2a7cdaef"
 					(reference "#PWR062")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:Fiducial")
+		(at 119.38 193.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "ee843afb-05db-4699-ae8b-d12e0c355de0")
+		(property "Reference" "FID6"
+			(at 121.92 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Fiducial"
+			(at 121.92 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Fiducial:Fiducial_0.75mm_Mask1.5mm"
+			(at 119.38 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 119.38 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 119.38 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturing comment" "Do Not Place"
+			(at 119.38 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "AxxSolder"
+				(path "/d71363c3-4d90-469c-a600-831e2a7cdaef"
+					(reference "FID6")
 					(unit 1)
 				)
 			)
