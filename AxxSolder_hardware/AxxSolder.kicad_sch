@@ -6465,38 +6465,31 @@
 				)
 			)
 		)
-		(symbol "Regulator_Linear:LD1117S33TR_SOT223"
+		(symbol "Regulator_Linear:AP2204K-3.3"
+			(pin_names
+				(offset 0.254)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
-				(at -3.81 3.175 0)
+			(property "Reference" "U4"
+				(at 0 7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "LD1117S33TR_SOT223"
-				(at 0 3.175 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+			(property "Value" "AP2204K-3.3"
 				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf"
-				(at 2.54 -6.35 0)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+				(at 0 8.255 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -6504,7 +6497,16 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "800mA Fixed Low Drop Positive Voltage Regulator, Fixed Output 3.3V, SOT-223"
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2204.pdf"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "150mA low dropout linear regulator, wide input voltage range, 3.3V fixed positive output, SOT-23-5"
 				(at 0 0 0)
 				(effects
 					(font
@@ -6513,7 +6515,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "REGULATOR LDO 3.3V"
+			(property "ki_keywords" "linear regulator ldo fixed positive"
 				(at 0 0 0)
 				(effects
 					(font
@@ -6522,7 +6524,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SOT?223*TabPin2*"
+			(property "ki_fp_filters" "SOT?23?5*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -6531,10 +6533,10 @@
 					(hide yes)
 				)
 			)
-			(symbol "LD1117S33TR_SOT223_0_1"
+			(symbol "AP2204K-3.3_0_1"
 				(rectangle
-					(start -5.08 -5.08)
-					(end 5.08 1.905)
+					(start -5.08 4.445)
+					(end 5.08 -5.08)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -6544,11 +6546,11 @@
 					)
 				)
 			)
-			(symbol "LD1117S33TR_SOT223_1_1"
+			(symbol "AP2204K-3.3_1_1"
 				(pin power_in line
-					(at 0 -7.62 90)
+					(at -7.62 2.54 0)
 					(length 2.54)
-					(name "GND"
+					(name "VIN"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6563,10 +6565,10 @@
 						)
 					)
 				)
-				(pin power_out line
-					(at 7.62 0 180)
+				(pin power_in line
+					(at 0 -7.62 90)
 					(length 2.54)
-					(name "VO"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6581,10 +6583,10 @@
 						)
 					)
 				)
-				(pin power_in line
+				(pin input line
 					(at -7.62 0 0)
 					(length 2.54)
-					(name "VI"
+					(name "EN"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6592,6 +6594,42 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "BYP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "VOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -10242,22 +10280,10 @@
 		(uuid "022eadde-768b-4e07-a0c2-80b744db93cb")
 	)
 	(junction
-		(at 184.15 21.59)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "05713879-543e-4590-84e3-b6ea7dee1bdd")
-	)
-	(junction
 		(at 394.97 -10.16)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "06905859-175f-4529-b6d1-52e0409e7937")
-	)
-	(junction
-		(at 162.56 29.21)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0a5c0fba-07b4-420e-90c5-779625561429")
 	)
 	(junction
 		(at 271.78 153.67)
@@ -10506,6 +10532,12 @@
 		(uuid "542822f5-5b58-4fd2-94d8-8d6aee7b8f08")
 	)
 	(junction
+		(at 162.56 29.21)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "55254b12-5b4c-449a-bdad-f2bb8f9a232b")
+	)
+	(junction
 		(at 133.35 173.99)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10698,10 +10730,22 @@
 		(uuid "80c048ad-ae05-4c0b-98b6-889fa24d2144")
 	)
 	(junction
+		(at 184.15 19.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "817d66ee-2ee0-4386-9d5d-04be2933ede1")
+	)
+	(junction
 		(at 156.21 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "81c4f9f0-7942-4c3d-87ae-11f47680718e")
+	)
+	(junction
+		(at 152.4 21.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "81d3d8a5-a65b-43dd-adcc-54806eb2fc6a")
 	)
 	(junction
 		(at 177.8 138.43)
@@ -10768,6 +10812,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "97edf0bf-4c46-4f63-a5cf-9af8adfe20d6")
+	)
+	(junction
+		(at 172.72 29.21)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "989cc142-b777-419e-b9c7-372b6e7b3e6e")
 	)
 	(junction
 		(at 358.14 5.08)
@@ -11327,13 +11377,13 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 29.21) (xy 162.56 29.21)
+			(xy 152.4 21.59) (xy 154.94 21.59)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "04444d86-bdbc-4cf7-abb1-2b4dae989820")
+		(uuid "04b6fb3b-2501-4f59-914b-e016c3070d90")
 	)
 	(wire
 		(pts
@@ -11740,6 +11790,16 @@
 	)
 	(wire
 		(pts
+			(xy 172.72 27.94) (xy 172.72 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "130a2bea-ea80-483c-9a02-edafc00738bb")
+	)
+	(wire
+		(pts
 			(xy 115.57 133.35) (xy 115.57 134.62)
 		)
 		(stroke
@@ -11878,16 +11938,6 @@
 			(type default)
 		)
 		(uuid "18840e68-8985-4374-81db-e1a5d8bdc088")
-	)
-	(wire
-		(pts
-			(xy 184.15 21.59) (xy 184.15 22.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1970c7b5-6206-4e4b-85c5-7ed58a28dd0e")
 	)
 	(wire
 		(pts
@@ -12696,6 +12746,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 19.05) (xy 152.4 19.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36d1997b-d437-4e23-90b0-6bea4bdab32c")
+	)
+	(wire
+		(pts
 			(xy 229.87 148.59) (xy 237.49 148.59)
 		)
 		(stroke
@@ -12806,6 +12866,16 @@
 	)
 	(wire
 		(pts
+			(xy 170.18 21.59) (xy 172.72 21.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ac0b848-469c-4d1a-bdeb-bcc936883618")
+	)
+	(wire
+		(pts
 			(xy 166.37 97.79) (xy 173.99 97.79)
 		)
 		(stroke
@@ -12883,6 +12953,16 @@
 			(type default)
 		)
 		(uuid "3e0a6444-aeca-42dc-bc76-cf956e83b24d")
+	)
+	(wire
+		(pts
+			(xy 162.56 29.21) (xy 172.72 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e7bc69c-eb9f-48e8-a538-5880a53f6f79")
 	)
 	(polyline
 		(pts
@@ -13006,6 +13086,16 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 19.05) (xy 152.4 21.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42734802-8264-4075-9927-8e68fb2a5c5e")
+	)
+	(wire
+		(pts
 			(xy 114.3 41.91) (xy 114.3 43.18)
 		)
 		(stroke
@@ -13116,7 +13206,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 29.21) (xy 184.15 29.21)
+			(xy 133.35 29.21) (xy 162.56 29.21)
 		)
 		(stroke
 			(width 0)
@@ -14433,7 +14523,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 21.59) (xy 194.31 21.59)
+			(xy 184.15 19.05) (xy 194.31 19.05)
 		)
 		(stroke
 			(width 0)
@@ -14854,7 +14944,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 21.59) (xy 154.94 21.59)
+			(xy 133.35 21.59) (xy 152.4 21.59)
 		)
 		(stroke
 			(width 0)
@@ -16258,6 +16348,16 @@
 	)
 	(wire
 		(pts
+			(xy 172.72 21.59) (xy 172.72 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4ce356f-85ec-4d1e-abaf-9a71a909428b")
+	)
+	(wire
+		(pts
 			(xy 16.51 146.05) (xy 22.86 146.05)
 		)
 		(stroke
@@ -16505,6 +16605,16 @@
 			(type default)
 		)
 		(uuid "ce1bf81f-86e1-44a7-b38e-d6a4fb70ce43")
+	)
+	(wire
+		(pts
+			(xy 172.72 29.21) (xy 184.15 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cef6e3cb-4559-47cb-8bbd-88d1a6a63939")
 	)
 	(polyline
 		(pts
@@ -17262,7 +17372,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 21.59) (xy 184.15 21.59)
+			(xy 170.18 19.05) (xy 184.15 19.05)
 		)
 		(stroke
 			(width 0)
@@ -17691,6 +17801,16 @@
 			(type default)
 		)
 		(uuid "fc2cb1e9-5bbc-41db-b385-0b70b89c6c71")
+	)
+	(wire
+		(pts
+			(xy 184.15 19.05) (xy 184.15 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd3c0548-b599-4ff1-bde8-61dfbe2347e3")
 	)
 	(wire
 		(pts
@@ -21218,77 +21338,6 @@
 			(project "AxxSolder"
 				(path "/d71363c3-4d90-469c-a600-831e2a7cdaef"
 					(reference "R37")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Regulator_Linear:LD1117S33TR_SOT223")
-		(at 162.56 21.59 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1ee63914-6321-448d-9cc2-740041193adf")
-		(property "Reference" "U1"
-			(at 162.56 16.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LD1117S33TR_SOT223"
-			(at 162.56 19.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-			(at 162.56 16.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf"
-			(at 165.1 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "800mA Fixed Low Drop Positive Voltage Regulator, Fixed Output 3.3V, SOT-223"
-			(at 162.56 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "edb4a168-4393-43c0-b413-60ed946447a9")
-		)
-		(pin "1"
-			(uuid "aabc067d-0e10-4fd3-9212-d6de609c4751")
-		)
-		(pin "3"
-			(uuid "e30e9342-fa0f-44c5-ac9b-921f226db8a2")
-		)
-		(instances
-			(project "AxxSolder"
-				(path "/d71363c3-4d90-469c-a600-831e2a7cdaef"
-					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -25029,7 +25078,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 194.31 21.59 0)
+		(at 194.31 19.05 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -25037,7 +25086,7 @@
 		(dnp no)
 		(uuid "42ef01be-6d6a-451a-8196-43ac02be5f3e")
 		(property "Reference" "#PWR03"
-			(at 194.31 25.4 0)
+			(at 194.31 22.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25046,7 +25095,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 198.12 20.32 0)
+			(at 198.12 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25054,7 +25103,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 194.31 21.59 0)
+			(at 194.31 19.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25063,7 +25112,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 194.31 21.59 0)
+			(at 194.31 19.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25072,7 +25121,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 194.31 21.59 0)
+			(at 194.31 19.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26091,6 +26140,83 @@
 			(project "AxxSolder"
 				(path "/d71363c3-4d90-469c-a600-831e2a7cdaef"
 					(reference "D13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Regulator_Linear:AP2204K-3.3")
+		(at 162.56 21.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4b02bbe6-e77b-4b41-91e0-22419eb83017")
+		(property "Reference" "U4"
+			(at 162.56 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AP2210K-3.3"
+			(at 162.56 16.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+			(at 162.56 13.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2210.pdf"
+			(at 162.56 19.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "300mA low dropout linear regulator, wide input voltage range, 3.3V fixed positive output, SOT-23-5"
+			(at 162.56 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6a3c0636-b47a-4554-af47-9eccb3c3618f")
+		)
+		(pin "1"
+			(uuid "9034e2d9-4f4b-4708-b914-959919f2feec")
+		)
+		(pin "4"
+			(uuid "312a7019-f056-4eda-aaae-221e9519ca77")
+		)
+		(pin "5"
+			(uuid "a0fc3032-95dc-4880-bceb-24bf7c0b0c70")
+		)
+		(pin "3"
+			(uuid "294a6489-76ba-4241-8a64-32bba75ba30e")
+		)
+		(instances
+			(project ""
+				(path "/d71363c3-4d90-469c-a600-831e2a7cdaef"
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -32137,6 +32263,120 @@
 			(project "AxxSolder"
 				(path "/d71363c3-4d90-469c-a600-831e2a7cdaef"
 					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 172.72 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8c1dc753-795f-446a-93ea-86514ef5a972")
+		(property "Reference" "C10"
+			(at 175.26 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100p"
+			(at 175.26 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 172.72 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 172.72 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 172.72 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly Comment" ""
+			(at 172.72 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Murata Electronics"
+			(at 172.72 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "GRM188R6YA106MA73J"
+			(at 172.72 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "81-GRM188R6YA106MA3J"
+			(at 172.72 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturing comment" ""
+			(at 172.72 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dc45de9e-c1e5-4a93-abf8-4a92c0054eb8")
+		)
+		(pin "2"
+			(uuid "2b5a6440-996b-4c5f-bd82-3afa736a14b1")
+		)
+		(instances
+			(project "AxxSolder"
+				(path "/d71363c3-4d90-469c-a600-831e2a7cdaef"
+					(reference "C10")
 					(unit 1)
 				)
 			)
